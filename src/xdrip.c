@@ -1587,18 +1587,13 @@ static void load_bg_delta() {
 		strcat(formatted_bg_delta, delta_label_buffer);
 	}
 
-	if((currentBG_isMMOL && current_bg == 55) || (!currentBG_isMMOL && (current_bg == 100 || current_bg == 99))) {
-		text_layer_set_text(message_layer, "BAZINGA!");
-		#ifdef PBL_COLOR
-		text_layer_set_text_color(message_layer, GColorDukeBlue);
-		#endif
-	} else {
+
 
 		text_layer_set_text(message_layer, formatted_bg_delta);
 		#ifdef PBL_COLOR
 		text_layer_set_text_color(message_layer,GColorBlack);
 		#endif
-	}
+
 	#if DEBUG_LEVEL > 0
 	APP_LOG(APP_LOG_LEVEL_INFO, "LOAD_BG_DELTA: message_layer is \"%s\"", text_layer_get_text(message_layer));
 	#endif

@@ -1659,9 +1659,9 @@ static void load_battlevel() {
 			
 	// get current battery level and set battery level text with percent
 	#ifdef PBL_COLOR
-	snprintf(battlevel_percent, BATTLEVEL_FORMATTED_SIZE, " B:%i%%", current_battlevel);
+	snprintf(battlevel_percent, BATTLEVEL_FORMATTED_SIZE, " P:%i%%", current_battlevel);
 	#else
-	snprintf(battlevel_percent, BATTLEVEL_FORMATTED_SIZE, "B:%i%%", current_battlevel);
+	snprintf(battlevel_percent, BATTLEVEL_FORMATTED_SIZE, "P:%i%%", current_battlevel);
 	#endif
 	#if DEBUG_LEVEL > 0
 	APP_LOG(APP_LOG_LEVEL_DEBUG, "SETTING BATTLEVEL to %s", battlevel_percent);
